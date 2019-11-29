@@ -6,8 +6,8 @@ import styled from "styled-components";
 const LinkContainer = styled.div`
   margin: 10pt;
   border-radius: 5pt;
-  border: 1pt solid green;
-  background-color: ${props => (props.isLinked ? "green" : "white")};
+  border: 1pt solid red;
+  background-color: ${props => (props.isLinked ? "red" : "white")};
   color: ${props => (props.isLinked ? "white" : "black")};
 `;
 

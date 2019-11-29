@@ -10,6 +10,8 @@ We will cover use of styled components with your react project.
 
 ### Installing Storybook
 
+https://storybook.js.org/
+
 Goto your project folder and run the following command:
 
 ```
@@ -18,6 +20,8 @@ npx -p @storybook/cli sb init
 ```
 
 ### Installing Styled Components
+
+https://www.styled-components.com/
 
 Goto your project folder and run the following command:
 
