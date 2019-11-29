@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import BlogPost from "./components/blog-post";
+import BlogPostNew from "./components/blog-post-new";
 
 function App() {
+  const [posts, setPosts] = useState([]);
+  console.log("Posts", posts);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BlogPostNew
+        savePost={post => {
+          console.log("Recive Posts", post);
+          const newPosts = [...posts, post];
+          setPosts(newPosts);
+        }}
+      />
+      {posts &&
+        posts.map((post, index) => (
+          <BlogPost
+            key={index}
+            heading={post.heading}
+            description={post.description}
+            link={post.link}
+          />
+        ))}
     </div>
   );
 }

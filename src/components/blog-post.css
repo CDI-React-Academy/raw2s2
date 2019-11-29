@@ -1,0 +1,22 @@
+.blog-post {
+  box-shadow: 1pt 1pt 3pt 1pt rgba(0, 0, 0, 0.1);
+  margin: 20pt;
+  overflow: hidden;
+}
+
+.blog-post .text {
+  float: left;
+  padding: 20pt;
+  text-align: left;
+}
+.blog-post .heading {
+  font-size: 18pt;
+}
+.blog-post .description {
+  font-size: 12pt;
+}
+.blog-post .image {
+  float: left;
+  width: 128pt;
+  height: 128pt;
+}
