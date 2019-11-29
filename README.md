@@ -7,3 +7,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 We will cover use of styled components with your react project.
+
+### Installing Storybook
+
+Goto your project folder and run the following command:
+
+```
+cd my-project
+npx -p @storybook/cli sb init
+```
+
+### Installing Styled Components
+
+Goto your project folder and run the following command:
+
+```
+yarn add styled-components
+```
+
+or
+
+```
+npm i styled-components --save
+```
