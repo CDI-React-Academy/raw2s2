@@ -7,10 +7,8 @@ const LinkContainer = styled.div`
   margin: 10pt;
   border-radius: 5pt;
   border: 1pt solid green;
-`;
-const LinkContainerChecked = styled(LinkContainer)`
-  background-color: green;
-  color: white;
+  background-color: ${props => (props.isLinked ? "green" : "white")};
+  color: ${props => (props.isLinked ? "white" : "black")};
 `;
 
 function BlogPost(props) {
@@ -23,8 +21,9 @@ function BlogPost(props) {
         <div className="heading">{props.heading}</div>
         <div className="description">{props.description}</div>
 
-        {!props.link && <LinkContainer>Unlinked</LinkContainer>}
-        {props.link && <LinkContainerChecked>Linked</LinkContainerChecked>}
+        <LinkContainer isLinked={props.link}>
+          {props.link ? "linked" : "unlinked"}
+        </LinkContainer>
       </div>
     </div>
   );
